@@ -1,1 +1,30 @@
+//---------------------------------------------------------------------------
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
 
+#pragma hdrstop
+
+//---------------------------------------------------------------------------
+
+#pragma argsused
+
+int main(int argc, char* argv[])
+{
+    double a, b, c, d, y, x, z, rezult;
+
+    puts("\n\tx,y,z=");
+    scanf("%lf%lf%lf", &x, &y, &z);
+
+    a = pow(y, -sqrt(fabs(x)));
+    b = x - y * 1./2;
+    d = pow(sin(atan(z)), 2);
+
+    rezult=log(a) * b + d;
+
+    printf("\n rezult= %4.3lf\n", rezult);
+    puts("Press any key to exit");
+    getch();
+    return 0;
+}
+//--------------------------------------------------------------------------- 
