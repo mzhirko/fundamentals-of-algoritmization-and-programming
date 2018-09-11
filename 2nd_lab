@@ -1,1 +1,52 @@
+//---------------------------------------------------------------------------
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+#include <stdio.h>
+#pragma hdrstop
 
+//---------------------------------------------------------------------------
+
+#pragma argsused
+int main(int argc, char* argv[])
+{   double y, a, x, b, f, z;
+    int kod, value;
+
+    puts("Calculating y = a*f(x)-ln(x+2.5)+b*(exp(x)-exp(-x))");
+    puts("Where x=-z/3 (z<-1), x=|z| (z>=-1)\n");
+
+    puts("Input a=");
+    scanf("%lf", &a);
+
+    puts("Input b=");
+    scanf("%lf", &b);
+
+    puts("Input z=");
+    scanf("%lf", &z);
+
+    puts("select function f(x):\n1:2x \n2:x^2 \n3:x/3");
+    scanf("%d", &kod);
+
+    if (z < -1) {
+        x= -z/3;
+        printf("x=-z/3=%lf", x);
+    } else {
+        if (z >= -1) {
+            x= fabs(z);
+            printf("x=|z|=%lf", x);
+        }
+    }
+
+    switch(kod) {
+        case 1: f=2*x; printf("\nf=2*x=%lf", f); break;
+        case 2: f=pow(x, 2); printf("\nf=x^2=%lf", f); break;
+        case 3: f=x/3; printf("\nf=x/3=%lf", f); break;
+    }
+
+    y = a*f-log(x+2.5)+b*(exp(x)-exp(-x));
+    printf("\nAnswer y= %8.4lf", y);
+
+    getch();
+    return 0;
+}
+//---------------------------------------------------------------------------
