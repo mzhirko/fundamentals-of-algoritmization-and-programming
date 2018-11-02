@@ -1,0 +1,79 @@
+//---------------------------------------------------------------------------
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+#include <vcl.h>
+#include <math.h>
+#pragma hdrstop
+
+double factorial (int n);
+double factorial2 (int n);
+void test();
+
+//---------------------------------------------------------------------------
+#pragma argsused
+int main(int argc, char* argv[])
+{
+    // a value
+    int a = 0;
+
+    // b value
+    int b = 0;
+
+    double s = 0;
+
+    int n = 0;
+
+    int x = 0, h = 0;
+
+    puts("Input interval range [a,b].");
+    puts("Input value left range a: ");
+    scanf("%d", &a);
+
+    puts("Input value right range b: ");
+    scanf("%d", &b);
+
+    puts("Input iteration step h: ");
+    scanf("%d", &h);
+
+    puts("Input iteration count n: ");
+    scanf("%d", &n);
+
+    for(x = a ; x <= b; x = x + h) {
+
+        for(int k = 0; k <= n; k = k + 1) {
+           s = s + pow(-1, k) * pow (x, k)/ factorial(k);
+        }
+
+        printf("s( %d ) = %8.4lf \n", x, s);
+    }
+
+    puts("\nPress any key ... ");
+    getch();
+
+    return 0;
+}
+//---------------------------------------------------------------------------
+double factorial (int n) {
+    if (n == 0)
+        return 1;
+
+    return n * factorial(n - 1);
+}
+
+double factorial2 (int n) {
+    double fact = 1;
+    for (int i=1; i <=n; i++) {
+        fact = fact * i;
+    }
+    return fact;
+}
+
+void test(){
+    int n = 5;
+    printf("n = %d; factorial = %lf; factorial2 = %lf\n", n, factorial(n), factorial2(n));
+
+    n = 50;
+    printf("n = %d; factorial = %lf; factorial2 = %lf\n", n, factorial(n), factorial2(n));
+
+}
