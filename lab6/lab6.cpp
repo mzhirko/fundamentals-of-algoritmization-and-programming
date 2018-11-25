@@ -6,20 +6,43 @@
 
 #pragma hdrstop
 
-//---------------------------------------------------------------------------
-#define MAXSIZE 255
-
 #pragma argsused
+
+// Initialize 2D array (array of array) 
+int** init2dArray(int rows, int columns) {
+
+    int **p2dArray = new int* [rows];
+
+    for(int i=0; i<rows; i++) {
+        p2dArray[i] = new int[columns];
+    }
+
+    return p2dArray;
+}
+
+//delete 2d array
+void delete2dArray(int** p2dArray, int rows, int columns) {
+
+    for(int i=0; i<rows; i++) {
+        delete []  p2dArray[i];
+    }
+
+    delete [] p2dArray;
+}
+
 int main(int argc, char* argv[])
 {
 
-   int dataArray[MAXSIZE][MAXSIZE] = {{0},{0}};
+   int rowCount = 0;
+   int columnCount = 0;
 
+   printf("Input rows: ");
+   scanf("%d", &rowCount);
 
+   printf("Input columns: ");
+   scanf("%d", &columnCount);
 
-   int rowCount = 5;
-   int columnCount = 5;
-   //scanf
+   int **dataArray = init2dArray(rowCount, columnCount);
 
    printf("Source array\n", rowCount, columnCount);
    for(int i = 0; i < rowCount; i++) {
@@ -50,7 +73,8 @@ int main(int argc, char* argv[])
    }
 
 
-    printf("\n\n");
+    printf("\n");
+    delete2dArray(dataArray, rowCount, columnCount);
     getch();
     return 0;
 }
