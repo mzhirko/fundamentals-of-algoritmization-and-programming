@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/graphics_demo.dir/main.cpp.o  -o graphics_demo -lsfml-graphics -lsfml-window -lsfml-system -lglut -lGLU -lGL 

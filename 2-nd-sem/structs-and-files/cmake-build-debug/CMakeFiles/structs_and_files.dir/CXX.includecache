@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maria/projects/github.com/fundamentals-of-algoritmization-and-programming-1/2-nd-sem/structs-and-files/main.cpp
+iostream
+-
+clocale
+-
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+fstream
+-
+cstdlib
+-
+

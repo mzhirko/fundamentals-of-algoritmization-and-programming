@@ -1,0 +1,3 @@
+/home/maria/projects/github.com/fundamentals-of-algoritmization-and-programming-1/2-nd-sem/structs-and-files/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/maria/projects/github.com/fundamentals-of-algoritmization-and-programming-1/2-nd-sem/structs-and-files/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/maria/projects/github.com/fundamentals-of-algoritmization-and-programming-1/2-nd-sem/structs-and-files/cmake-build-debug/CMakeFiles/structs_and_files.dir

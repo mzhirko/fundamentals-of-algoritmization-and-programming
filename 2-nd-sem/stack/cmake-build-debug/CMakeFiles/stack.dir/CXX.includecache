@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maria/projects/github.com/fundamentals-of-algoritmization-and-programming-1/2-nd-sem/stack/main.cpp
+iostream
+-
+ctime
+-
+clocale
+-
+

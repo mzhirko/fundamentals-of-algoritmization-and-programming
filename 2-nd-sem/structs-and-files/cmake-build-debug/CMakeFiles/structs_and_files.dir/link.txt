@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/structs_and_files.dir/main.cpp.o  -o structs_and_files 

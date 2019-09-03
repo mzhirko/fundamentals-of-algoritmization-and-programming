@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maria/projects/github.com/fundamentals-of-algoritmization-and-programming-1/2-nd-sem/part-text-into-words/main.cpp
+wchar.h
+-
+vector
+-
+iostream
+-
+fstream
+-
+algorithm
+-
+set
+-
+exception
+-
+codecvt
+-
+
